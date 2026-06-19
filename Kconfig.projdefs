@@ -1,0 +1,33 @@
+menu "Cerradura Electrónica - Configuración"
+
+    config WIFI_SSID
+        string "SSID de la red WiFi"
+        default "mi_red"
+
+    config WIFI_PASSWORD
+        string "Contraseña WiFi"
+        default ""
+
+    config TELEGRAM_TOKEN
+        string "Token del Bot de Telegram"
+        default ""
+        help
+            Obtenlo con @BotFather en Telegram
+
+    config TELEGRAM_CHAT_ID
+        string "Chat ID autorizado"
+        default ""
+        help
+            Obtenlo con @userinfobot en Telegram
+
+    config TB_TOKEN
+        string "Token de ThingsBoard"
+        default ""
+        help
+            Obtenlo en demo.thingsboard.io
+
+    config FW_VERSION
+        string "Versión del firmware"
+        default "1.0.0"
+
+endmenu

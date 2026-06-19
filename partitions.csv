@@ -1,0 +1,17 @@
+# Tabla de particiones para ESP32-WROOM-32 (4MB flash)
+# Tamaño total: 0x400000 (4,194,304 bytes)
+#
+# Mapa de memoria:
+#   0x000000 – 0x00FFFF  Bootloader + tabla de particiones (reservado por ESP-IDF)
+#   0x009000 – 0x00DFFF  NVS          (20 KB)  — credenciales WiFi, UIDs, config
+#   0x00E000 – 0x00FFFF  OTA data     ( 8 KB)  — estado de actualización OTA
+#   0x010000 – 0x1CFFFF  app0 OTA_0   (1792 KB) — imagen activa/primera
+#   0x1D0000 – 0x38FFFF  app1 OTA_1   (1792 KB) — imagen OTA recibida
+#   0x390000 – 0x3FFFFF  SPIFFS       ( 448 KB) — archivos estáticos (web, logs)
+#
+# Name,     Type, SubType,  Offset,    Size
+nvs,        data, nvs,      0x9000,    0x5000,
+otadata,    data, ota,      0xe000,    0x2000,
+app0,       app,  ota_0,    0x10000,   0x1C0000,
+app1,       app,  ota_1,    0x1D0000,  0x1C0000,
+spiffs,     data, spiffs,   0x390000,  0x70000,

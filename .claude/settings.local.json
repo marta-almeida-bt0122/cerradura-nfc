@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 *)",
+      "Bash(Remove-Item \"C:\\\\Espressif\\\\SBC25M\\\\main\\\\ap_config.c\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Espressif\\\\SBC25M\\\\main\\\\ap_config.h\" -Force)",
+      "Bash(Write-Host \"Eliminados ap_config.c y ap_config.h\")",
+      "PowerShell(Remove-Item *)"
+    ]
+  }
+}
